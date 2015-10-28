@@ -50,10 +50,20 @@ function runit() {
 import turtle
 t = turtle.Turtle()
 
-for c in ["red","green","blue","yellow","orange"]:
-    t.color(c)
-    t.forward(100)
-    t.left(144)
+
+S = int(input("Please enter the amount of sides in the polygon: "))
+
+angle = ((S - 2) * 180) / S
+
+while S > 2 and S < 26:
+    for c in range(S):
+        t.color(c)
+        t.forward(20)
+        t.left(180 - angle)
+            
+    else:
+        break
+
 
 </textarea><br /> 
 <button type="button" onclick="runit()">Run</button> 
